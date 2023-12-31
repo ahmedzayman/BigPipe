@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header, main, footer {
+            opacity: 0; /* Initially hide elements */
+            transition: opacity 0.5s ease-in-out; /* Add a smooth transition effect */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <h1>Ahmed Ayman</h1>
+    </header>
+
+    <main id="main">
+        <h2>This is my website</h2>
+        <p>Concept of website using bigpipe. Made by Ahmed Ayman.</p>
+    </main>
+
+    <footer id="footer">
+        <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simulate asynchronous loading and rendering
+        function simulateAsyncRender(elementId, content, delay) {
+            setTimeout(() => {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.innerHTML = content;
+                    element.style.opacity = 1; // Show the element
+                }
+            }, delay);
+        }
+
+        // Load and render header
+        simulateAsyncRender('header', '<h1>Ahmed Ayman</h1>', 1000);
+
+        // Load and render main content
+        simulateAsyncRender('main', '<h2>This is my website</h2><p>Concept of website using bigpipe. Made by Ahmed Ayman.</p>', 2000);
+
+        // Load and render footer
+        simulateAsyncRender('footer', '<p>&copy; Zn3 Your Website. All rights reserved.</p>', 3000);
+    </script>
+
+</body>
+</html>
